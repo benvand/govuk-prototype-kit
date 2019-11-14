@@ -19,6 +19,15 @@ You must protect user privacy at all times, even when using prototypes. Prototyp
 - [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
 - [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
 
+## Publishing on GOVUK PaaS
+
+```
+cf push --no-start
+cf set-env my-govuk-design-system-prototype USERNAME <SOME_USERNAME>
+cf set-env my-govuk-design-system-prototype PASSWORD <SOME_PASSWORD>
+cf start my-govuk-design-system-prototype
+```
+
 ## Support
 
 The GOV.UK Prototype Kit is maintained by the Government Digital Service. If you’ve got a question or need support you can:

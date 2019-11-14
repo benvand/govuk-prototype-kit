@@ -79,6 +79,13 @@ if (isSecure) {
   app.set('trust proxy', 1) // needed for secure cookies on heroku
 }
 
+// Avoid basicAuth on status page
+app.use('/_status', function (req, res) {
+  res.status(200)
+  res.json({ status: 'OK'})
+})
+
+// Use basicAuth
 middleware.forEach(func => app.use(func))
 
 // Set up App

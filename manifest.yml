@@ -1,0 +1,11 @@
+---
+applications:
+- name: my-govuk-design-system-prototype
+#  env:
+#    PASSWORD: <SOME_PASSWORD>
+#    USERNAME: <SOME_USERNAME>
+  routes:
+  - route: my-govuk-design-system-prototype.cloudapps.digital
+  health-check-type: http
+  health-check-http-endpoint: /_status
+  timeout: 10
